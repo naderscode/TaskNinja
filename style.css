@@ -1,9 +1,21 @@
 body {
   background: #f9e933;
+  font-size: 100%;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Ubuntu', sans-serif;
+	padding-bottom: 5px;
+}
+
+header {
+	color: red;
 }
 
 header, main, footer {
   min-width: 855px;
+  padding:20px;
+  margin: auto;
 }
 
 header .container, main .container, footer .container {
@@ -11,19 +23,41 @@ header .container, main .container, footer .container {
   margin: auto;
 }
 
+
 header {
   background: white;
   overflow: auto;
 }
 
-header h1 {
-  float: left;
-  width: 570px;
-}
-
 header nav {
   float: right;
   width: 285px;
+}
+
+header h1 {
+  float: left;
+  width: 570px;
+  font-size: 2.2em;
+  font-style: italic;
+}
+
+hr {
+	color: grey;
+}
+
+.line {
+	background: white;
+    overflow: auto;
+    padding: 0;
+}
+
+main h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+main h3 {
+	font-size: 1.3em;
 }
 
 main {
@@ -41,12 +75,28 @@ main .right {
   width: 285px;
 }
 
+main p {
+   padding-bottom: 15px;
+}
+
 footer .left {
   float: left;
   width: 570px;
+}
+
+footer h5 {
+	padding-bottom: 5px;
+	font-size: 1.2em;
+}
+
+footer .contact p:nth-child(1) {
+  color: red;
+  font-style: italic;
 }
 
 footer .sitemap {
   float: right;
   width: 285px;
 }
+
+
