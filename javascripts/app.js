@@ -1,13 +1,30 @@
 var main = function(){
 	"use strict"
 
-//refactor using jQuery forEach loop
-$(".tabs span").toArray().forEach(function(element){
+//refactor using jQuery forEach loop.
+$(".tabs a span").toArray().forEach(function(element){
+	//create a click handler for element
 	$(element).on("click", function(){
+
+		var $element = $(element);
 		$(".tabs span").removeClass("active");
-		$(element).addClass("active");
+		$element.addClass("active");
 		$("main .content").empty();
+		
+
+		if($element.parent().is(":nth-child(1)")){
+			console.log("first tab clicked");
+
+		} else if($element.parent().is(":nth-child(2)")){
+			console.log("second tab clicked");
+
+		} else if($element.parent().is(":nth-child(3)")){
+			console.log("third tab clicked");
+
+		} 
+
 		return false;
+
 	});
 });
 
