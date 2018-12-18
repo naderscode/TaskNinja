@@ -1,6 +1,17 @@
 var main = function(){
 	"use strict"
 
+//refactor using jQuery forEach loop
+$(".tabs span").toArray().forEach(function(element){
+	$(element).on("click", function(){
+		$(".tabs span").removeClass("active");
+		$(element).addClass("active");
+		$("main .content").empty();
+		return false;
+	});
+});
+
+/*
 //Refactoring using a for loop
 for (var i = 1 ; i <= 3; i++){
 
@@ -15,7 +26,7 @@ for (var i = 1 ; i <= 3; i++){
 	});
 
 }
-
+*/
 
 /*
 //Refactoring using a function
