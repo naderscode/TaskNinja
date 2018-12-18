@@ -51,15 +51,6 @@ h5 {
 }
 
 
-main h2 {
-	font-size: 1.5em;
-	font-weight: bold;
-}
-
-main h3 {
-	font-size: 1.3em;
-}
-
 main {
   background: #fff;
   border-radius: 0 5px 5px 5px;
@@ -67,9 +58,49 @@ main {
   overflow: auto;
 }
 
-main .left {
-  float: left;
-  width: 570px;
+.tabs a span {
+  width: 100px;
+  display: inline-block;
+  background:  #ddd;
+  padding: 5px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.tabs a .active {
+  background: #eee;
+}
+
+main .content {
+  padding: 30px 10px 30px 10px;
+  background: #eee;
+  border-radius: 0 5px 5px 5px;
+}
+
+main .content li {
+  background: #eff;
+  padding: 3px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+}
+
+main .content p {
+  background: yellow;
+}
+
+main .content input {
+  font-size: 1.5em;
+}
+
+main .content .button {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0 3px 0 3px;
+  margin-left: 5px;
+  background: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 main .right {
