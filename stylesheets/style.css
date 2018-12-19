@@ -90,11 +90,11 @@ main .content p {
 }
 
 main .content input {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
-main .content .button {
-  font-size: 1.3em;
+main .content button {
+  font-size: 1.5em;
   font-weight: bold;
   padding: 0 3px 0 3px;
   margin-left: 5px;

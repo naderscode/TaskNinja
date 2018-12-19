@@ -31,19 +31,13 @@ $(".tabs a span").toArray().forEach(function(element){
 				
 			}
 
-			console.log("first tab clicked");
-
 		} else if($element.parent().is(":nth-child(2)")){
 				//oldest todos first
 				$content = $("<ul>");
 				toDos.forEach(function(todo){
 					$content.append($("<li>").text(todo));
 					
-
 				});	
-
-
-			console.log("second tab clicked");
 
 		} else if($element.parent().is(":nth-child(3)")){
 				// input a new todo
@@ -61,10 +55,6 @@ $(".tabs a span").toArray().forEach(function(element){
 
 				$content = $("<div>");
 				$content.append($input).append($button);
-				
-
-
-			console.log("third tab clicked");
 
 		} 
 
@@ -88,10 +78,8 @@ for (var i = 1 ; i <= 3; i++){
 		return false;
 
 	});
-
 }
 */
-
 /*
 //Refactoring using a function
 function makeActive(i){
@@ -119,10 +107,7 @@ $(".tabs a:nth-child(2)").on("click", function(){
 $(".tabs a:nth-child(3)").on("click", function(){
 		makeActive(3);
 		return false;
-
 });
-
-
 	
 */
 
