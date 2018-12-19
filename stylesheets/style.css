@@ -103,14 +103,6 @@ main .content .button {
   cursor: pointer;
 }
 
-main .right {
-  float: right;
-  width: 285px;
-}
-
-main p {
-   padding-bottom: 15px;
-}
 
 footer {
 	border-top: 1px solid #ddd;

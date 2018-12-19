@@ -10,12 +10,13 @@ var toDos = [ "Buy groceries",
 
 //using jQuery forEach loop.
 $(".tabs a span").toArray().forEach(function(element){
+	
 	//create a click handler for element
 	var $element = $(element);
 	$element.on("click", function(){
 
 		
-		var $content;
+		var $content, $input, $button;
 
 		$(".tabs span").removeClass("active");
 		$element.addClass("active");
@@ -23,13 +24,21 @@ $(".tabs a span").toArray().forEach(function(element){
 		
 
 		if($element.parent().is(":nth-child(1)")){
+			//newest todos first
+			$content = $("<ul>");
+			for (var i = toDos.length-1; i >= 0; i--){
+				$content.append($("<li>").text(toDos[i]));
+				
+			}
+
 			console.log("first tab clicked");
 
 		} else if($element.parent().is(":nth-child(2)")){
+				//oldest todos first
 				$content = $("<ul>");
 				toDos.forEach(function(todo){
 					$content.append($("<li>").text(todo));
-					$(".content").append($content);
+					
 
 				});	
 
@@ -37,9 +46,29 @@ $(".tabs a span").toArray().forEach(function(element){
 			console.log("second tab clicked");
 
 		} else if($element.parent().is(":nth-child(3)")){
+				// input a new todo
+				$input = $("<input>");
+				$button = $("<button>").text("+");
+
+
+				$button.on("click", function(){
+					if ($input.val() !== 0){
+						toDos.push($input.val());
+						$input.val("");
+					}
+
+				});
+
+				$content = $("<div>");
+				$content.append($input).append($button);
+				
+
+
 			console.log("third tab clicked");
 
 		} 
+
+		$("main .content").append($content);
 
 		return false;
 
