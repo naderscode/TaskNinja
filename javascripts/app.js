@@ -1,12 +1,22 @@
 var main = function(){
 	"use strict"
 
-//refactor using jQuery forEach loop.
+var toDos = [ "Buy groceries",
+	"Car wash",
+	"Haircut",
+	"Order office supplies",
+	"meeting with client",
+	"New app design" ];
+
+//using jQuery forEach loop.
 $(".tabs a span").toArray().forEach(function(element){
 	//create a click handler for element
-	$(element).on("click", function(){
+	var $element = $(element);
+	$element.on("click", function(){
 
-		var $element = $(element);
+		
+		var $content;
+
 		$(".tabs span").removeClass("active");
 		$element.addClass("active");
 		$("main .content").empty();
@@ -16,6 +26,14 @@ $(".tabs a span").toArray().forEach(function(element){
 			console.log("first tab clicked");
 
 		} else if($element.parent().is(":nth-child(2)")){
+				$content = $("<ul>");
+				toDos.forEach(function(todo){
+					$content.append($("<li>").text(todo));
+					$(".content").append($content);
+
+				});	
+
+
 			console.log("second tab clicked");
 
 		} else if($element.parent().is(":nth-child(3)")){
