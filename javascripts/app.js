@@ -37,6 +37,12 @@ $(".tabs a span").toArray().forEach(function(element){
 				});	
 
 		} else if($element.parent().is(":nth-child(3)")){
+				//oldest todos first
+				
+					console.log("tags");
+				
+
+		} else if($element.parent().is(":nth-child(4)")){
 				// input a new todo
 				$input = $("<input>");
 				$button = $("<button>").text("+");
