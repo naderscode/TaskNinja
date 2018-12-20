@@ -1,0 +1,27 @@
+[
+	{
+		"descrioption": "Buy Groceries",
+		"tags": ["shopping", "errands"]
+
+	},
+	{
+		"description": "Car wash",
+		"tags": ["auto"]
+	},
+	{
+		"description": "Haircut",
+		"tags": ["personal care", "beauty"]
+	},
+	{
+		"description": "Order office supplies",
+		"tags": ["work"]
+	},
+	{
+		"description": "Meet with client",
+		"tags": ["work", "meetings"]
+	},
+	{
+		"description": "Design new app",
+		"tags": ["work", "design"]
+	}
+]
