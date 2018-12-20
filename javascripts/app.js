@@ -1,12 +1,9 @@
 var main = function(toDoObjects){ /* pass toDoObjects as a parameter so that main has access to the todos */
 	"use strict";
 
-var toDos = [ "Buy groceries",
-	"Car wash",
-	"Haircut",
-	"Order office supplies",
-	"meeting with client",
-	"New app design" ];
+var toDos = toDoObjects.map(function(toDo){
+	return toDo.description;
+});
 
 //using jQuery forEach loop.
 $(".tabs a span").toArray().forEach(function(element){

@@ -1,12 +1,11 @@
 [
 	{
-		"descrioption": "Buy Groceries",
-		"tags": ["shopping", "errands"]
-
-	},
-	{
 		"description": "Car wash",
 		"tags": ["auto"]
+	},
+	{
+		"description": "Buy Groceries",
+		"tags": ["shopping", "errands"]
 	},
 	{
 		"description": "Haircut",
