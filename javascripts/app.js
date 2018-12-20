@@ -1,5 +1,5 @@
 var main = function(){
-	"use strict"
+	"use strict";
 
 var toDos = [ "Buy groceries",
 	"Car wash",
@@ -110,7 +110,7 @@ $(".tabs a:nth-child(3)").on("click", function(){
 });
 	
 */
-
+$(".tabs a:first-child span").trigger("click");
 
 };
 
