@@ -1,4 +1,4 @@
-var main = function(){
+var main = function(toDoObjects){ /* pass toDoObjects as a parameter so that main has access to the todos */
 	"use strict";
 
 var toDos = [ "Buy groceries",
@@ -114,4 +114,11 @@ $(".tabs a:first-child span").trigger("click");
 
 };
 
-$(document).ready(main);
+//add anonymous function to document.ready that calls getJSON
+//and then calls main with the result
+$(document).ready(function(){
+	$.getJSON("todos.json", function(toDoObjects){
+		//call main with toDoObjects as an argument
+		main(toDoObjects);
+	})
+});
