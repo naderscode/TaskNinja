@@ -78,6 +78,15 @@ main .content {
   border-radius: 0 5px 5px 5px;
 }
 
+main .content h3 {
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 5px;
+    color: #999;;
+    background: #ddd;
+    padding: 5px;
+    margin: 20px 0 10px 0;
+}
+
 main .content li {
   background: #eff;
   padding: 3px;

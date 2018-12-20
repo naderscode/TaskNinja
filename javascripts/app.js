@@ -38,8 +38,51 @@ $(".tabs a span").toArray().forEach(function(element){
 
 		} else if($element.parent().is(":nth-child(3)")){
 				//oldest todos first
-				
-					console.log("tags");
+				console.log("tags");
+
+				var organizedByTag = [
+					{
+						"tagName": "shopping",
+						"toDos": ["Buy Groceries", "Buy Gifts"]
+					},
+					{
+						"tagName": "personal care",
+						"toDos": ["Hair cut", "Do a Massage", "Gym Session"]
+					},
+					{
+						"tagName": "work",
+						"toDos": ["Meet with client", "Design new app"]
+					},
+					{
+						"tagName": "meetings",
+						"toDos": ["Meet with client"]
+					},
+					{
+						"tagName": "design",
+						"toDos": ["Design new app"]
+					},
+					{
+						"tagName": "auto",
+						"toDos": ["Oil change", "Renew Auto Insurance"]
+					}
+
+				]
+
+			organizedByTag.forEach(function(tag){
+				var $tagName = $("<h3>").text(tag.tagName);
+				$content =$("<ul>");
+
+				tag.toDos.forEach(function(description){
+					var $li = $("<li>").text(description);
+					$content.append($li);
+				});
+
+
+				$("main .content").append($tagName).append($content);
+
+
+			});
+
 				
 
 		} else if($element.parent().is(":nth-child(4)")){
